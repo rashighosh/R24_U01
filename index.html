@@ -1,0 +1,49 @@
+<html>
+    <header>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="./JS/script.js" defer></script>
+        <script src="./papaparse.min.js"></script>
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/header.css">
+    </header>
+
+    <body>
+        <div class="wrapper">
+            <div class="header" id="myHeader">
+                <img id="logo" src="https://vpf2content.s3.amazonaws.com/Uploads/Videos/R24/images/temp_logo.png" />
+                <h2>R24 Research Studies</h2>
+            </div>
+            <video autoplay id="myVideo" autoplay poster="poster.png" onended="switchIdle()">
+                <source src="videos/idle.mp4"
+                    type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <video autoplay id="idleVideo" autoplay poster="poster.png" muted loop>
+                <source src="/videos/idle.mp4"
+                    type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <button id="endInteraction" onclick="redirectPage()">Finish Talking to Alex</button>
+            
+        </div>
+
+    </body>
+
+    <!-- DIALOGFLOW MESSENGER - REPLACE WITH YOURS -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+        <df-messenger
+            df-cx="true"
+            location="us-east1"
+            chat-title="ALEX"
+            agent-id="945fff25-2b0d-48aa-be19-830f70605287"
+            language-code="en"
+            intent="Begin"
+            expand="true"
+        ></df-messenger>
+    <!-- END OF DIALOGFLOW MESSENGER -->
+
+</html>

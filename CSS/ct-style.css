@@ -1,0 +1,65 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.ct-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+fieldset {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 7px;
+    border-color: #1e4a97;
+}
+
+legend {
+    background-color: #1e4a97;
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+    font-size: 21px;
+}
+
+label, input, select {
+    font-size: 21px;
+    border-radius: 5px;
+}
+
+#submit {
+    background-color: #00a038;
+    color: white;
+    border-radius: 7px;
+    font-size: 21px;
+    border-width: 0px;
+    padding: 9px;
+}
+
+#submit:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    animation: pulse-red 2s infinite;
+  }
+  
+  @keyframes pulse-red {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 #00a038;
+    }
+    
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+    }
+    
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    }
+  }

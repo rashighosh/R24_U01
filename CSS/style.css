@@ -1,0 +1,64 @@
+body {
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  position: relative;
+} 
+
+#myVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
+#idleVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
+
+#endInteraction {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: maroon;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 15px;
+  border-width: 0px;
+  padding: 15px;
+  transition: .2s ease-in-out;
+}
+
+#endInteraction:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+  }
+}
